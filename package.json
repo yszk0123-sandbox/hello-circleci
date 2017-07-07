@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "name": "hello-circleci",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "https://github.com/yszk0123/hello-circleci.git",
+  "author": "Yuji Suzuki <y0suzuki0123@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "node test.js"
+  }
+}

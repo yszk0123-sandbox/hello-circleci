@@ -1,0 +1,24 @@
+machine:
+  timezone: Asia/Tokyo
+  node:
+    version: 6.9.5
+  environment:
+    COVERAGE: true
+    YARN_VERSION: 0.27.5
+    PATH: "${PATH}:${HOME}/.yarn/bin"
+dependencies:
+  cache_directories:
+    - ~/.cache/yarn/
+    - ~/.yarn/
+test:
+  override:
+    - yarn test
+deployment:
+  master:
+    branch: master
+    commands:
+      - echo "[master] branch $(git rev-parse --abbrev-ref @) finish"
+  feature:
+    branch: /feature-.*/
+    commands:
+      - ./scripts/deploy-feature.sh
