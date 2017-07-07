@@ -22,3 +22,7 @@ deployment:
     branch: /feature-.*/
     commands:
       - ./scripts/deploy-feature.sh
+  tag:
+    branch: /v\d+\.\d+\.\d+/
+    commands:
+      - ./scripts/deploy-tag.sh
